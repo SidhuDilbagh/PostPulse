@@ -41,14 +41,15 @@ export default function Header() {
         </Link>
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse >
-        <Navbar.Link active={location === "/" } className="text-red-950" as={'div'}>
+      <Navbar.Collapse>
+        <Navbar.Link active={location === "/" } className={`text-red-950 ${location === "/" ? "bg-orange-100 lg:bg-none " : ""}`}
+          as={'div'}>
           <Link to="/">home</Link>
         </Navbar.Link>
-        <Navbar.Link active={location === "/about" } className="text-red-950" as={'div'}>
+        <Navbar.Link active={location === "/about" } className={`text-red-950 ${location === "/about" ? "bg-orange-100 lg:bg-none " : ""}`} as={'div'}>
           <Link to="/about" >about</Link>
         </Navbar.Link>
-        <Navbar.Link active={location === "/projects" } className="text-red-950" as={'div'}>
+        <Navbar.Link active={location === "/projects" } className={`text-red-950 ${location === "/projects" ? "bg-orange-100 lg:bg-none " : ""}`} as={'div'}>
           <Link to="/projects">projects</Link>
         </Navbar.Link>
       </Navbar.Collapse>
