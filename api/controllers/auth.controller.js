@@ -45,9 +45,10 @@ export const signIn = async(req,res,next)=>{
                 {id:validUser._id},
                 process.env.JWT_SECRET
         );
+        const {password:pass ,...rest} =validUser._doc;
         res.status(200).cookie('access_token',token,{
             httpOnly:true
-        }).json(validUser);
+        }).json(rest);
     } catch(err){
         next(err);
     }
