@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInStart,signInSuccess,signInFaliure } from "../redux/user/userSlice.js";
 import { useDispatch,useSelector } from "react-redux";
+import OAuth from "../components/oAuth.jsx";
 
 export default function signIn() {
   const [formData, setFormData] = useState({});
@@ -90,10 +91,11 @@ export default function signIn() {
               ):
               "signIn"}
             </Button>
+            <OAuth />
           </form>
           <div>
             Not registered yet?
-            <Link to="/signIn"> signUp</Link>
+            <Link to="/signUp"> signUp</Link>
           </div>
           {errorMessage && (
             <Alert className="mt-5 max-w-sm whitespace-normal" color="failure">
