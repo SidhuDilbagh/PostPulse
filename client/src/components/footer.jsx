@@ -5,7 +5,7 @@ export default function footerComp() {
   return (
     <Footer container className="border border-t-2 bg-orange-50">
       <div>
-        <div className="text-center w-screen grid grid-cols-1 place-items-center sm:mt-4 sm:grid-cols-3 sm:gap-4">
+        <div className="text-center max-w-full grid grid-cols-1 place-items-center sm:mt-4 sm:grid-cols-3 sm:gap-4 ">
           <div col>
             <Link
               to="/"
