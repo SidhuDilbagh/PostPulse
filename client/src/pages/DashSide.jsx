@@ -14,7 +14,7 @@ export default function DashSide() {
     }
   },[location.search]) 
   return (
-    <Sidebar className='w-100 md:max-w-min'>
+    <Sidebar className='w-screen md:max-w-min'>
         <Sidebar.Items>
             <Sidebar.ItemGroup>
                 <Link to='/dashboard?tab=profile' >
